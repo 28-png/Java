@@ -59,7 +59,25 @@ public class Main {
 //        System.out.println(x);
 //        System.out.println(y);
 
+//implicit casting
+//        byte > short > int > long > float > double
 
+//        if we want to use both double and int we have to explicitly cast the result if you want a whole number.
+
+//        double x = 1.1;
+//       int y = (int)x + 2;
+//        System.out.println(y);
+
+//       if you want to use a string:
+
+//        String x = "1";
+//        int y = Integer.parseInt(x) + 2;
+//        System.out.println(y);
+
+//        if you want a floating string:
+        String x = "1.1";
+        double y = Double.parseDouble(x) + 2;
+        System.out.println(y);
 
 
 
