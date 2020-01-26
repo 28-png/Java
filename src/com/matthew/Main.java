@@ -128,12 +128,18 @@ public class Main {
 
 //        to print a string we simply use next with nothing after it.
 //        if you wanted to use the first and last name you need to use nextLine()
+//        to get rid of white space we use trim()
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Name: ");
+//        String name = scanner.nextLine().trim();
+//        System.out.println("You are " + name);
+
+//        Mortgage Project
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Name: ");
-        String name = scanner.nextLine();
-        System.out.println("You are " + name);
-
+        System.out.print("Principle: ");
+        int Principle = scanner.nextInt();
 
 
 
