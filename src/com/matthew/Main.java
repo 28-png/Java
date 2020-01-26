@@ -29,9 +29,44 @@ public class Main {
 
 //        System.out.println(Arrays.toString(numbers));
 
-        int[] numbers = {1, 2, 3, 4, 5};
+//        int[] numbers = {1, 2, 3, 4, 5};
+//
+//        System.out.println(Arrays.toString(numbers));
 
-        System.out.println(Arrays.toString(numbers));
+// for multi-dimensional Arrays in multi-dimensional Arrays you have to use deepToString to print the output otherwise
+//        you get the memory location.
+
+//        int[][] numbers = {{1, 2, 3}, {4, 5, 6}};
+//        System.out.println(Arrays.deepToString(numbers));
+
+//        to create a constant much like in ES6 we use final in front of the variable you will not be able to reassign after.
+//      for constants we use all caps.
+//        final float PI = 3.14F;
+
+//        when using division, if you divide two whole numbers it will return a whole number in order to get a
+//        floating number you need to put a double in parens in front of each number.
+
+//        double result = (double)10 / (double)3;
+//
+//        System.out.println(result);
+
+// for incrementing if the increment operator is applied as a post fix first the value of x will be copied
+// to y then x will be incremented by 1 so x will be 2 and y will be 1 otherwise if x is pre
+// incremented both will be two
+
+//        int x = 1;
+//        int y = x++;
+//        System.out.println(x);
+//        System.out.println(y);
+
+
+
+
+
+
+
+
+
 
 
 
