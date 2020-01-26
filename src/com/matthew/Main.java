@@ -1,7 +1,10 @@
 package com.matthew;
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -75,13 +78,61 @@ public class Main {
 //        System.out.println(y);
 
 //        if you want a floating string:
-        String x = "1.1";
-        double y = Double.parseDouble(x) + 2;
-        System.out.println(y);
+
+//        String x = "1.1";
+//        double y = Double.parseDouble(x) + 2;
+//        System.out.println(y);
+
+// the Math class:
+//        Math.round() has two methods one returns a int the other a long this is how you specify the return:
+
+//      int result = Math.round(1.1F);
+//        System.out.println(result);
 
 
+//        int result = (int)Math.ceil(1.1F);
+//        System.out.println(result);
+
+//        int result = (int)Math.floor(1.1F);
+//        System.out.println(result);
+
+// abstract classes: to create new class we will use getCurrencyInstance() because new NumberFormat does not work on
+// abstract classes. for percents we will use getPercentInstance()
+
+//      NumberFormat currency = NumberFormat.getCurrencyInstance();
+//
+//      String result = currency.format(1234567.891);
+//        System.out.println(result);
+
+//       NumberFormat percent = NumberFormat.getPercentInstance();
+//
+//      String result = percent.format(0.1);
+//        System.out.println(result);
+
+//        you can method chain like so:
 
 
+//      String result = NumberFormat.getPercentInstance().format(0.1);
+//        System.out.println(result);
+
+
+//        how to read inputs from the user:
+//        there is a scanner method when using scanner you need to specify where you want to read the inputs
+//        from. to read from the terminal you use the param of System.in to stay on the same line you use print
+//        instead of println
+
+//        Scanner scanner = new Scanner(System.in);
+//       System.out.print("Age: ");
+//        byte age = scanner.nextByte();
+//        System.out.println("You are " + age);
+
+//        to print a string we simply use next with nothing after it.
+//        if you wanted to use the first and last name you need to use nextLine()
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+        System.out.println("You are " + name);
 
 
 
