@@ -140,9 +140,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Principle: ");
         int Principle = scanner.nextInt();
-
-
-
+        System.out.print("Annual Interest Rate: ");
+        float AnnualInterestRate = scanner.nextFloat();
+        System.out.print("Period (Years): ");
+        int years = scanner.nextInt();
 
 
 
