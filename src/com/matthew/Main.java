@@ -1,5 +1,6 @@
 package com.matthew;
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Date;
 public class Main {
 
@@ -17,9 +18,33 @@ public class Main {
 //        reference types when reassigned are not independent of each other
 //        Date now = new Date();
 //        System.out.println(now);
-        Point point1 = new Point(1, 1);
-        Point point2 = point1;
-        point1.x = 2;
-        System.out.println(point2);
-    }
+//        Point point1 = new Point(1, 1);
+//        Point point2 = point1;
+//        point1.x = 2;
+//       System.out.println(point2);
+//      this is an old way of doing arrays.
+//        int[] numbers = new int[5];
+//        numbers[0] = 1;
+//        numbers[1] = 2;
+
+//        System.out.println(Arrays.toString(numbers));
+
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        System.out.println(Arrays.toString(numbers));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   }
 }
