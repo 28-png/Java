@@ -151,8 +151,26 @@ public class Main {
 //        else
 //            System.out.println(number);
 
-// Loops in Java:
+// Loops in Java: a good usage for while loops is if you dont know how long the input from the user is
 
+//        Scanner scanner3 = new Scanner(System.in);
+//        String input = "";
+//        while (!input.equals("quit")) {
+//            System.out.print("Input: ");
+//            input = scanner3.next().toLowerCase();
+//            if(input.equals("quit"))
+//                break; // break breaks the loop so quit will not be printed back continue brings control to
+//            // the beginning of a statement.
+//            System.out.println(input);
+//        }
+
+
+//        for each loops in Java
+
+        String[] fruits = {"mango", "orange", "apple"};
+
+        for(String fruit : fruits)
+            System.out.println(fruit);
 
 
 
