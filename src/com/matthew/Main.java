@@ -112,7 +112,7 @@ public class Main {
 //        you can method chain like so:
 
 
-//      String result = NumberFormat.getPercentInstance().format(0.1);
+//      String result = NumberFormat.getCurrencyInstance().format(0.1);
 //        System.out.println(result);
 
 
@@ -136,17 +136,27 @@ public class Main {
 //        System.out.println("You are " + name);
 
 //        Mortgage Project
-
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Principle: ");
-        int Principle = scanner.nextInt();
+       int principle = scanner.nextInt();
         System.out.print("Annual Interest Rate: ");
-        float AnnualInterestRate = scanner.nextFloat();
+        float annualInterestRate = scanner.nextFloat();
+        float monthlyIntRate = annualInterestRate / PERCENT / MONTHS_IN_YEAR;
         System.out.print("Period (Years): ");
-        int years = scanner.nextInt();
+       byte years = scanner.nextByte();
+       int numberOfPayments = years * MONTHS_IN_YEAR;
 
+       double mortgage = principle
+               * (monthlyIntRate * Math.pow(1 + monthlyIntRate, numberOfPayments))
+               / (Math.pow(1 + monthlyIntRate, numberOfPayments) -1);
 
+       String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println("Mortgage: " + mortgageFormatted);
 
+//      String result = NumberFormat.getCurrencyInstance().format(0.1);
+//        System.out.println(result);
 
 
 
