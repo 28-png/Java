@@ -135,28 +135,65 @@ public class Main {
 //        String name = scanner.nextLine().trim();
 //        System.out.println("You are " + name);
 
+//        comparison operators in Java same as javascript.
+
+//        if statements in Java same as javascript
+
+//        Scanner scanner2 = new Scanner(System.in);
+//        System.out.print("number: ");
+//        int number = scanner2.nextInt();
+//        if(number % 5 == 0 && number % 3 == 0)
+//            System.out.println("FizzBuzz");
+//        else if(number % 5 == 0)
+//            System.out.println("Fizz");
+//        else if(number % 3 == 0)
+//            System.out.println("Buzz");
+//        else
+//            System.out.println(number);
+
+// Loops in Java:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        Mortgage Project
-        final byte MONTHS_IN_YEAR = 12;
-        final byte PERCENT = 100;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Principle: ");
-       int principle = scanner.nextInt();
-        System.out.print("Annual Interest Rate: ");
-        float annualInterestRate = scanner.nextFloat();
-        float monthlyIntRate = annualInterestRate / PERCENT / MONTHS_IN_YEAR;
-        System.out.print("Period (Years): ");
-       byte years = scanner.nextByte();
-       int numberOfPayments = years * MONTHS_IN_YEAR;
+//        Mortgage project revisited.
+//        final byte MONTHS_IN_YEAR = 12;
+//        final byte PERCENT = 100;
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Principle: ");
+//       int principle = scanner.nextInt();
+//        System.out.print("Annual Interest Rate: ");
+//        float annualInterestRate = scanner.nextFloat();
+//        float monthlyIntRate = annualInterestRate / PERCENT / MONTHS_IN_YEAR;
+//        System.out.print("Period (Years): ");
+//       byte years = scanner.nextByte();
+//       int numberOfPayments = years * MONTHS_IN_YEAR;
+//
+//       double mortgage = principle
+//               * (monthlyIntRate * Math.pow(1 + monthlyIntRate, numberOfPayments))
+//               / (Math.pow(1 + monthlyIntRate, numberOfPayments) -1);
+//
+//       String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+//        System.out.println("Mortgage: " + mortgageFormatted);
 
-       double mortgage = principle
-               * (monthlyIntRate * Math.pow(1 + monthlyIntRate, numberOfPayments))
-               / (Math.pow(1 + monthlyIntRate, numberOfPayments) -1);
-
-       String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println("Mortgage: " + mortgageFormatted);
-
-//      String result = NumberFormat.getCurrencyInstance().format(0.1);
-//        System.out.println(result);
 
 
 
