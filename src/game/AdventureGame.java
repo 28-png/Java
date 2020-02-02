@@ -53,14 +53,15 @@ public AdventureGame() {
 
     public void forwardAdventureGame() {
         do {
-            if (forwardSmallEnemy)
+            if (forwardSmallEnemy) {
                 System.out.println("you have encountered a small enemy! attack!\n");
-            hitSmallEnemyOnForward();
-            if (forwardLargeEnemy)
+                hitSmallEnemyOnForward();
+            } else if (forwardLargeEnemy) {
                 System.out.println("You have encountered a large enemy! attack!\n");
-            else
+            }  else {
                 System.out.println("Lets keep going where do we go from here? \n");
-            moving = scanner.next();
+                moving = scanner.next();
+            }
         } while(moving.equals("forward") || yourHealth < 0);
     }
 
@@ -71,10 +72,10 @@ public AdventureGame() {
     do {
         System.out.println("Attack the small enemy! ");
         smallEnemy = scanner.next();
-            if (smallDamage)
+            if (smallDamage) {
                 yourHealth -= 1;
-            System.out.println("You've been hit and your health is at " + yourHealth);
-        if(yourHealth <= 0) {
+                System.out.println("You've been hit and your health is at " + yourHealth);
+            } else if(yourHealth <= 0) {
             System.out.println("Youve been defeated!\n");
             break;
         }
