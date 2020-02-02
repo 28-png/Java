@@ -36,25 +36,26 @@ public AdventureGame() {
         moving = scanner.next();
         do {
             forwardAdventureGame();
-            leftAdventureGame();
-            rightAdventureGame();
-            backAdventureGame();
-        }while(!moving.equals("run"));
-
-
-
+                break;
+//            leftAdventureGame();
+//            rightAdventureGame();
+//            backAdventureGame();
+        }while(!moving.equals("run") && yourHealth > 0);
 
     }
 
+   private boolean smallDamage = smallEnemyDamage > 1 && smallEnemyDamage < 50;
+//   private boolean ourSmallDamage = ourDamageSmallEnemy > 5 && ourDamageSmallEnemy <= 50;
+
     public void hitSmallEnemyOnForward() {
         do {
-            System.out.println("Attack the small enemy! \n");
+            System.out.println("You have encountered a small enemy ATTACK! \n");
             smallEnemy = scanner.next();
             if (smallDamage)
                 yourHealth -= 1;
-            System.out.println("You've been hit and your health is at " + yourHealth + "\n");
-            if(yourHealth <= 0) {
-                System.out.println("Youve been defeated!\n");
+                System.out.println("You've been hit and your health is at " + yourHealth + "\n");
+             if(yourHealth <= 0) {
+                System.out.println("You've been defeated!\n");
                 break;
             }
 //       else if(ourSmallDamage)
@@ -72,19 +73,17 @@ public AdventureGame() {
 
     public void forwardAdventureGame() {
         do {
-            if (forwardSmallEnemy)
-                System.out.println("you have encountered a small enemy! attack!\n");
-            hitSmallEnemyOnForward();
-            if (forwardLargeEnemy)
-                System.out.println("You have encountered a large enemy! attack!\n");
+            if (forwardSmallEnemy || forwardLargeEnemy)
+                hitSmallEnemyOnForward();
+          else if (forwardLargeEnemy)
+                System.out.println("You have encountered a large enemy! ATTACK!\n");
             else
                 System.out.println("Lets keep going where do we go from here? \n");
+            System.out.println(yourHealth);
             moving = scanner.next();
         } while(moving.equals("forward"));
     }
 
-   private boolean smallDamage = smallEnemyDamage > 1 && smallEnemyDamage < 50;
-//   private boolean ourSmallDamage = ourDamageSmallEnemy > 5 && ourDamageSmallEnemy <= 50;
 
 
 
@@ -92,58 +91,58 @@ public AdventureGame() {
 
 //   moving left method:
 
-    private boolean leftSmallEnemy = movement < 40 && movement > 30;
-    private boolean leftLargeEnemy = movement < 30 && movement > 20;
-
-    public void leftAdventureGame() {
-        do {
-            if (leftSmallEnemy)
-                System.out.println("you have encountered a small enemy! attack!\n");
-            else if (leftLargeEnemy)
-                System.out.println("You have encountered a large enemy! attack!\n");
-            else
-                System.out.println("Lets keep going where do we go from here? \n");
-            moving = scanner.next();
-        }while(moving.equals("left"));
-    }
+//    private boolean leftSmallEnemy = movement < 40 && movement > 30;
+//    private boolean leftLargeEnemy = movement < 30 && movement > 20;
+//
+//    public void leftAdventureGame() {
+//        do {
+//            if (leftSmallEnemy)
+//                System.out.println("you have encountered a small enemy! attack!\n");
+//            else if (leftLargeEnemy)
+//                System.out.println("You have encountered a large enemy! attack!\n");
+//            else
+//                System.out.println("Lets keep going where do we go from here? \n");
+//            moving = scanner.next();
+//        }while(moving.equals("left"));
+//    }
 
 
 
 //   moving right method:
 
-    private boolean rightSmallEnemy = movement < 20 && movement > 10;
-    private boolean rightLargeEnemy = movement < 40 && movement > 30;
-
-    public void rightAdventureGame() {
-        do {
-            if (rightSmallEnemy)
-                System.out.println("you have encountered a small enemy! attack!\n");
-            else if (rightLargeEnemy)
-                System.out.println("You have encountered a large enemy! attack!\n");
-            else
-                System.out.println("Lets keep going where do we go from here? \n");
-            moving = scanner.next();
-        }while(moving.equals("right"));
-    }
-
-
-//        moving back method:
-
-    private boolean backSmallEnemy = movement < 10 && movement > 1;
-    private boolean backLargeEnemy = movement < 30 && movement > 20;
-
-    public void backAdventureGame() {
-        do {
-            if (backSmallEnemy)
-                System.out.println("you have encountered a small enemy! attack!\n");
-            else if (backLargeEnemy)
-                System.out.println("You have encountered a large enemy! attack!\n");
-            else
-                System.out.println("Lets keep going where do we go from here? \n");
-            moving = scanner.next();
-        }while(moving.equals("back"));
-    }
-
-
-
+//    private boolean rightSmallEnemy = movement < 20 && movement > 10;
+//    private boolean rightLargeEnemy = movement < 40 && movement > 30;
+//
+//    public void rightAdventureGame() {
+//        do {
+//            if (rightSmallEnemy)
+//                System.out.println("you have encountered a small enemy! attack!\n");
+//            else if (rightLargeEnemy)
+//                System.out.println("You have encountered a large enemy! attack!\n");
+//            else
+//                System.out.println("Lets keep going where do we go from here? \n");
+//            moving = scanner.next();
+//        }while(moving.equals("right"));
+//    }
+//
+//
+////        moving back method:
+//
+//    private boolean backSmallEnemy = movement < 10 && movement > 1;
+//    private boolean backLargeEnemy = movement < 30 && movement > 20;
+//
+//    public void backAdventureGame() {
+//        do {
+//            if (backSmallEnemy)
+//                System.out.println("you have encountered a small enemy! attack!\n");
+//            else if (backLargeEnemy)
+//                System.out.println("You have encountered a large enemy! attack!\n");
+//            else
+//                System.out.println("Lets keep going where do we go from here? \n");
+//            moving = scanner.next();
+//        }while(moving.equals("back"));
+//    }
+//
+//
+//
 }
