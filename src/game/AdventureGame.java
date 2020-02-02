@@ -3,29 +3,24 @@ package game;
 import java.util.Scanner;
 
 public class AdventureGame {
+    private Scanner scanner;
+    private String moving, smallEnemy, largeEnemy;
+    private int movement = (int) (Math.random() * 40 + 1);
+    static int smallEnemyHealth = 2;
+    static int largeEnemyHealth = 4;
+    static int healthStim = 0;
+    static int yourHealth = 5;
+    static int healthstimAmount = 3;
+    static int stimPackAfterEnemy = 1;
+    static int ourDamageSmallEnemy, ourDamageLargeEnemy,
+            largeEnemyDamage, smallEnemyDamage = (int) (Math.random() * 50 + 1);
 
     //    variables
 
-    static Scanner scanner = new Scanner(System.in);
+public AdventureGame() {
+    this.scanner = new Scanner(System.in);
 
-    static String moving, smallEnemy, largeEnemy;
-
-    static int smallEnemyHealth = 2;
-
-    static int largeEnemyHealth = 4;
-
-    static int yourHealth = 5;
-
-    static int healthStim = 0;
-
-    static int healthstimAmount = 3;
-
-    static int stimPackAfterEnemy = 1;
-
-    static int movement = (int) (Math.random() * 40 + 1);
-
-    static int ourDamageSmallEnemy, ourDamageLargeEnemy,
-            largeEnemyDamage, smallEnemyDamage = (int) (Math.random() * 50 + 1);
+}
 
 // end of main variables
 
@@ -34,7 +29,7 @@ public class AdventureGame {
 //  main method:
 
 
-    public static void mainAdventureGame() {
+    public  void mainAdventureGame() {
         System.out.println("the controls are forward, left, right, back, hit to attack, stim for health, \n" +
                 "status for how much health and stim packs you have, and block to block");
         System.out.print("What direction do you want to go? \n");
@@ -53,10 +48,10 @@ public class AdventureGame {
 
 //  moving forward method:
 
-    static boolean forwardSmallEnemy = movement < 20 && movement > 10;
-    static boolean forwardLargeEnemy = movement < 10 && movement > 1;
+    private boolean forwardSmallEnemy = movement < 20 && movement > 10;
+    private boolean forwardLargeEnemy = movement < 10 && movement > 1;
 
-    public static void forwardAdventureGame() {
+    public void forwardAdventureGame() {
         do {
             if (forwardSmallEnemy)
                 System.out.println("you have encountered a small enemy! attack!\n");
@@ -68,9 +63,10 @@ public class AdventureGame {
         } while(moving.equals("forward"));
     }
 
-//
+
 
     public static void hitSmallEnemyOnForward() {
+
 
     }
 
@@ -78,10 +74,10 @@ public class AdventureGame {
 
 //   moving left method:
 
-    static boolean leftSmallEnemy = movement < 40 && movement > 30;
-    static boolean leftLargeEnemy = movement < 30 && movement > 20;
+    private boolean leftSmallEnemy = movement < 40 && movement > 30;
+    private boolean leftLargeEnemy = movement < 30 && movement > 20;
 
-    public static void leftAdventureGame() {
+    public void leftAdventureGame() {
         do {
             if (leftSmallEnemy)
                 System.out.println("you have encountered a small enemy! attack!\n");
@@ -97,10 +93,10 @@ public class AdventureGame {
 
 //   moving right method:
 
-    static boolean rightSmallEnemy = movement < 20 && movement > 10;
-    static boolean rightLargeEnemy = movement < 40 && movement > 30;
+    private boolean rightSmallEnemy = movement < 20 && movement > 10;
+    private boolean rightLargeEnemy = movement < 40 && movement > 30;
 
-    public static void rightAdventureGame() {
+    public void rightAdventureGame() {
         do {
             if (rightSmallEnemy)
                 System.out.println("you have encountered a small enemy! attack!\n");
@@ -115,10 +111,10 @@ public class AdventureGame {
 
 //        moving back method:
 
-    static boolean backSmallEnemy = movement < 10 && movement > 1;
-    static boolean backLargeEnemy = movement < 30 && movement > 20;
+    private boolean backSmallEnemy = movement < 10 && movement > 1;
+    private boolean backLargeEnemy = movement < 30 && movement > 20;
 
-    public static void backAdventureGame() {
+    public void backAdventureGame() {
         do {
             if (backSmallEnemy)
                 System.out.println("you have encountered a small enemy! attack!\n");
