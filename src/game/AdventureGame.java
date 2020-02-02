@@ -39,7 +39,7 @@ public AdventureGame() {
             leftAdventureGame();
             rightAdventureGame();
             backAdventureGame();
-        }while(!moving.equals("run") && yourHealth < 0);
+        }while(!moving.equals("run"));
 
 
 
@@ -52,7 +52,7 @@ public AdventureGame() {
             smallEnemy = scanner.next();
             if (smallDamage)
                 yourHealth -= 1;
-            System.out.println("You've been hit and your health is at \n" + yourHealth);
+            System.out.println("You've been hit and your health is at " + yourHealth + "\n");
             if(yourHealth <= 0) {
                 System.out.println("Youve been defeated!\n");
                 break;
@@ -80,7 +80,7 @@ public AdventureGame() {
             else
                 System.out.println("Lets keep going where do we go from here? \n");
             moving = scanner.next();
-        } while(moving.equals("forward") && yourHealth < 0);
+        } while(moving.equals("forward"));
     }
 
    private boolean smallDamage = smallEnemyDamage > 1 && smallEnemyDamage < 50;
