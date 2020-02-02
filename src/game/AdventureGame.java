@@ -34,6 +34,8 @@ public AdventureGame() {
                 "status for how much health and stim packs you have, and block to block");
         System.out.print("What direction do you want to go? \n");
         moving = scanner.next();
+        smallEnemy = scanner.next();
+        largeEnemy = scanner.next();
         do {
             forwardAdventureGame();
             leftAdventureGame();
@@ -63,9 +65,22 @@ public AdventureGame() {
         } while(moving.equals("forward"));
     }
 
+   private boolean smallDamage = smallEnemyDamage > 1 && smallEnemyDamage < 5;
+   private boolean ourSmallDamage = ourDamageSmallEnemy > 5 && ourDamageSmallEnemy <= 50;
 
-
-    public static void hitSmallEnemyOnForward() {
+    public void hitSmallEnemyOnForward() {
+    do {
+        System.out.println("Attack the small enemy! ");
+        smallEnemy = scanner.next();
+        if(smallDamage)
+            yourHealth -= 1;
+        System.out.println("Youve been hit and your health is at " + yourHealth);
+        System.out.println("Attack again! ");
+        smallEnemy = scanner.next();
+        if(ourSmallDamage)
+        smallEnemyHealth -= 2;
+        System.out.println("You defeated the enemy!");
+    } while(smallEnemy.equals("hit"));
 
 
     }
