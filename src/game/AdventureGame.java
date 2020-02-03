@@ -37,7 +37,7 @@ public AdventureGame() {
         do {
                 forwardAdventureGame();
             if(yourHealth < 1)
-            System.out.println("Would you like to continue?");
+            System.out.println("confirm: with yes/no");
             moving = scanner.next();
 //            leftAdventureGame();
 //            rightAdventureGame();
@@ -58,12 +58,13 @@ public AdventureGame() {
                 System.out.println("You've been hit and your health is at " + yourHealth + "\n");
             if(yourHealth < 1) {
                 System.out.println("You've been defeated!\n");
-                    break;
+                System.out.println("Would you like to continue? \n");
+                smallEnemy = scanner.next();
             }
 //       else if(ourSmallDamage)
 //        smallEnemyHealth -= 2;
 //        System.out.println("You defeated the enemy!");
-        } while(smallEnemy.equals("hit"));
+        } while(smallEnemy.equals("hit") || !(smallEnemy.equals("no")));
 
 
     }
