@@ -39,7 +39,6 @@ public AdventureGame() {
             if(yourHealth < 1)
             System.out.println("Would you like to continue?");
             moving = scanner.next();
-                break;
 //            leftAdventureGame();
 //            rightAdventureGame();
 //            backAdventureGame();
@@ -64,7 +63,7 @@ public AdventureGame() {
 //       else if(ourSmallDamage)
 //        smallEnemyHealth -= 2;
 //        System.out.println("You defeated the enemy!");
-        } while(smallEnemy.equals("hit") || yourHealth < 0);
+        } while(smallEnemy.equals("hit"));
 
 
     }
