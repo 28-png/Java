@@ -35,12 +35,15 @@ public AdventureGame() {
         System.out.print("What direction do you want to go? \n");
         moving = scanner.next();
         do {
-            forwardAdventureGame();
+                forwardAdventureGame();
+            if(yourHealth < 1)
+            System.out.println("Would you like to continue?");
+            moving = scanner.next();
                 break;
 //            leftAdventureGame();
 //            rightAdventureGame();
 //            backAdventureGame();
-        }while(!moving.equals("run") && yourHealth > 0);
+        }while(!moving.equals("run") && !moving.equals("no"));
 
     }
 
@@ -54,7 +57,7 @@ public AdventureGame() {
             if (smallDamage)
                 yourHealth -= 1;
                 System.out.println("You've been hit and your health is at " + yourHealth + "\n");
-             if(yourHealth <= 0) {
+             if(yourHealth < 1) {
                 System.out.println("You've been defeated!\n");
                 break;
             }
@@ -79,7 +82,6 @@ public AdventureGame() {
                 System.out.println("You have encountered a large enemy! ATTACK!\n");
             else
                 System.out.println("Lets keep going where do we go from here? \n");
-            System.out.println(yourHealth);
             moving = scanner.next();
         } while(moving.equals("forward"));
     }
