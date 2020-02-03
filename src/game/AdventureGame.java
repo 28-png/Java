@@ -52,19 +52,19 @@ public AdventureGame() {
 
     public void hitSmallEnemyOnForward() {
         do {
-            System.out.println("You have encountered a small enemy ATTACK! \n");
-            smallEnemy = scanner.next();
+                System.out.println("You have encountered a small enemy ATTACK! \n");
+                smallEnemy = scanner.next();
             if (smallDamage)
                 yourHealth -= 1;
                 System.out.println("You've been hit and your health is at " + yourHealth + "\n");
             if(yourHealth < 1) {
                 System.out.println("You've been defeated!\n");
-                break;
+                    break;
             }
 //       else if(ourSmallDamage)
 //        smallEnemyHealth -= 2;
 //        System.out.println("You defeated the enemy!");
-        } while(smallEnemy.equals("hit"));
+        } while(smallEnemy.equals("hit") || yourHealth < 0);
 
 
     }
