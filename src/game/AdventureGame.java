@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class AdventureGame {
     private Scanner scanner;
-    private String moving, smallEnemy, largeEnemy;
+    private String moving;
+    private  String smallEnemy;
+    private String largeEnemy;
     private int movement = (int) (Math.random() * 40 + 1);
     static int smallEnemyHealth = 2;
     static int largeEnemyHealth = 4;
@@ -64,7 +66,7 @@ public AdventureGame() {
 //       else if(ourSmallDamage)
 //        smallEnemyHealth -= 2;
 //        System.out.println("You defeated the enemy!");
-        } while(smallEnemy.equals("hit") || !(smallEnemy.equals("no")));
+        } while(smallEnemy.equals("hit") || !smallEnemy.equals("no"));
 
 
     }
