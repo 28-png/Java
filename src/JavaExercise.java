@@ -16,8 +16,20 @@ public static ArrayList<ArrayList<Integer>> list(ArrayList<Integer> listToTry, i
         return sums;
     }
 
+    public static ArrayList<Integer> fac(int num) {
+        ArrayList<Integer> number = new ArrayList<>();
+        for(int i = 1; i <= num; i++) {
+            if(num % i == 0) {
+                number.add(i);
+            }
+        }
+        return number;
+    }
+
     public static void main(String[] args) {
         System.out.println(compare(1, 2));
+
+        System.out.println(fac(4));
     }
 
 
